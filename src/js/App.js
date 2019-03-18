@@ -22,7 +22,7 @@ let resize = () => {
 }
 
 let createStar = (x, y) => {
-    let graphics = new PIXI.Graphics();
+    let graphics = new PIXI.Graphics()
     graphics.lineStyle(0); // draw a circle, set the lineStyle to zero so the circle doesn't have an outline
     graphics.beginFill(0xFFFFFF);
     graphics.drawCircle(x, y, 5);
@@ -57,7 +57,7 @@ let createStars = async () => {
     let res2 = await request(options)
     console.log(res2)
     let stars = undefined
-    if (!res2.error.code  || !res2.error) {
+    if (res2.result.random) {
         console.log('------> no error')
         stars = res2.result.random.data
     }
