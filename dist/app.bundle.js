@@ -121441,7 +121441,7 @@ function () {
             console.log(res2);
             stars = undefined;
 
-            if (!res2.error.code || !res2.error) {
+            if (res2.result.random) {
               console.log('------> no error');
               stars = res2.result.random.data;
             } else if (res2.error.code === 403) {
